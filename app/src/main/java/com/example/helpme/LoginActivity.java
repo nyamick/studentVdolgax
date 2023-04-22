@@ -39,6 +39,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = loginEmail.getText().toString();
                 String pass = loginPassword.getText().toString();
+//                Intent intent = new Intent(this, MainActivity.class);
+//                intent.putExtra("name", email);
+//                startActivity(intent);
                 
                 if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     if (!pass.isEmpty()){
@@ -73,6 +76,8 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
                     }
                 });
+
+
 
      }
 }
